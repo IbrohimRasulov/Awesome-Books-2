@@ -10,3 +10,10 @@ function addBook(title, author) {
   bookList.push(book);
 }
 
+function filterByTitle(item, title){
+  item.title != title;
+}
+
+function removeBook(title){
+  bookList = bookList.filter(filterByTitle(title));
+}
