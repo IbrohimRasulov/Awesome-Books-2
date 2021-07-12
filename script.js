@@ -18,7 +18,7 @@ function addBookToStorage(title, author) {
   window.localStorage.setItem(title, author);
 }
 
-function removeBook(title, e){
+function removeBook(title, e) {
   bookList = bookList.filter(filterByTitle);
   e.parentNode.parentNode.removeChild(e.parentNode);
   revomeFromStorage(title);
@@ -34,7 +34,7 @@ function display(title, author) {
   bookContainer.appendChild(div);
 }
 
-for (let i = 0; i < localStorage.length; i =+ 1) {
+for (let i = 0; i < localStorage.length; i += 1) {
   const title = localStorage.key(i);
   const author = localStorage.getItem(localStorage.key(i));
   display(title, author);
