@@ -17,6 +17,7 @@ function filterByTitle(item){
 function removeBook(title, e){
   bookList = bookList.filter(filterByTitle);
   e.parentNode.parentNode.removeChild(e.parentNode);
+  revomeFromStorage(title);
 }
 
 function display(title, author) {
@@ -35,10 +36,14 @@ document.getElementById("book-form").addEventListener("submit", (e) => {
   author = document.getElementById("author").value;
   addBook(title, author);
   display(title, author);
-  addBookToStorage(title, author)
+  addBookToStorage(title, author);
   document.getElementById('book-form').reset();
 });
 
 function addBookToStorage(title, author) {
   window.localStorage.setItem(title, author);
+}
+
+function revomeFromStorage(title) {
+  window.localStorage.removeItem(title);
 }
