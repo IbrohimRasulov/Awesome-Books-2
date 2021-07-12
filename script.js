@@ -29,3 +29,12 @@ function display(title, author) {
   bookContainer.appendChild(div)
 }
 
+document.getElementById("book-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  title = document.getElementById("book-title").value;
+  author = document.getElementById("author").value;
+  addBook(title, author);
+  display(title, author);
+  document.getElementById('book-form').reset();
+});
+
