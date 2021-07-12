@@ -1,6 +1,6 @@
-const bookList = []
+let bookList = []
 
-function book(title, author) {
+function Book(title, author) {
   this.title = title;
   this.author = author;
 }
@@ -10,12 +10,13 @@ function addBook(title, author) {
   bookList.push(book);
 }
 
-function filterByTitle(item, title){
-  item.title != title;
+function filterByTitle(item){
+  return item.title != "title 1";
 }
 
-function removeBook(title){
-  bookList = bookList.filter(filterByTitle(title));
+function removeBook(title, e){
+  bookList = bookList.filter(filterByTitle);
+  e.parentNode.parentNode.removeChild(e.parentNode);
 }
 
 function display(title, author) {
@@ -23,8 +24,8 @@ function display(title, author) {
   div.innerHTML = `
   <p>${title}</p>
   <p>${author}</p>
-  <button onClick = "removeBook(${title})">Delete</button>`
-  const bookContainer = document.getElemetById("bookContainer")
+  <button onClick = "removeBook('${title}', this)">Delete</button>`;
+  const bookContainer = document.getElementById('bookContainer');
   bookContainer.appendChild(div)
 }
 
