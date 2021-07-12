@@ -1,4 +1,4 @@
-let bookList = []
+let bookList = [];
 
 function Book(title, author) {
   this.title = title;
@@ -10,8 +10,12 @@ function addBook(title, author) {
   bookList.push(book);
 }
 
-function filterByTitle(item){
-  return item.title != "title 1";
+function filterByTitle(item) {
+  return item.title !== 'title 1';
+}
+
+function addBookToStorage(title, author) {
+  window.localStorage.setItem(title, author);
 }
 
 function removeBook(title, e){
@@ -21,35 +25,27 @@ function removeBook(title, e){
 }
 
 function display(title, author) {
-  const div = document.createElement("div")
+  const div = document.createElement('div');
   div.innerHTML = `
   <p>${title}</p>
   <p>${author}</p>
   <button onClick = "removeBook('${title}', this)">Delete</button>`;
   const bookContainer = document.getElementById('bookContainer');
-  bookContainer.appendChild(div)
+  bookContainer.appendChild(div);
 }
 
-for(let i = 0; i < localStorage.length; i++) {
-  let title = localStorage.key(i);
-  let author = localStorage.getItem(localStorage.key(i));
+for (let i = 0; i < localStorage.length; i =+ 1) {
+  const title = localStorage.key(i);
+  const author = localStorage.getItem(localStorage.key(i));
   display(title, author);
 }
 
-document.getElementById("book-form").addEventListener("submit", (e) => {
+document.getElementById('book-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  title = document.getElementById("book-title").value;
-  author = document.getElementById("author").value;
+  const title = document.getElementById('book-title').value;
+  const author = document.getElementById('author').value;
   addBook(title, author);
   display(title, author);
   addBookToStorage(title, author);
   document.getElementById('book-form').reset();
 });
-
-function addBookToStorage(title, author) {
-  window.localStorage.setItem(title, author);
-}
-
-function revomeFromStorage(title) {
-  window.localStorage.removeItem(title);
-}
