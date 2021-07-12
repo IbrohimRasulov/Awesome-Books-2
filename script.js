@@ -35,6 +35,10 @@ document.getElementById("book-form").addEventListener("submit", (e) => {
   author = document.getElementById("author").value;
   addBook(title, author);
   display(title, author);
+  addBookToStorage(title, author)
   document.getElementById('book-form').reset();
 });
 
+function addBookToStorage(title, author) {
+  window.localStorage.setItem(title, author);
+}
