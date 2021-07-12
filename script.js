@@ -30,6 +30,12 @@ function display(title, author) {
   bookContainer.appendChild(div)
 }
 
+for(let i = 0; i < localStorage.length; i++) {
+  let title = localStorage.key(i);
+  let author = localStorage.getItem(localStorage.key(i));
+  display(title, author);
+}
+
 document.getElementById("book-form").addEventListener("submit", (e) => {
   e.preventDefault();
   title = document.getElementById("book-title").value;
