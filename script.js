@@ -17,3 +17,14 @@ function filterByTitle(item, title){
 function removeBook(title){
   bookList = bookList.filter(filterByTitle(title));
 }
+
+function display(title, author) {
+  const div = document.createElement("div")
+  div.innerHTML = `
+  <p>${title}</p>
+  <p>${author}</p>
+  <button onClick = "removeBook(${title})">Delete</button>`
+  const bookContainer = document.getElemetById("bookContainer")
+  bookContainer.appendChild(div)
+}
+
