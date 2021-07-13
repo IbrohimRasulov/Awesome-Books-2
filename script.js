@@ -18,6 +18,10 @@ function addBookToStorage(title, author) {
   window.localStorage.setItem(title, author);
 }
 
+function revomeFromStorage(title) {
+  window.localStorage.removeItem(title);
+}
+
 function removeBook(title, e) {
   bookList = bookList.filter(filterByTitle);
   e.parentNode.parentNode.removeChild(e.parentNode);
