@@ -16,7 +16,7 @@ class Books {
     const div = document.createElement('div');
     div.innerHTML = `
     <h3>${title}</h3>
-    <h3>${author}</h3>
+    <p>${author}</p>
     <button class = "delete-buttons">Delete</button>`;
     const bookContainer = document.getElementById('bookContainer');
     bookContainer.appendChild(div);
