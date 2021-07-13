@@ -4,15 +4,15 @@ class Books {
   }
 
   addBook(title, author) {
-    const book = {title, author};
+    const book = { title, author };
     this.bookList.push(book);
   }
 
-  addBookToStorage(title, author) {
+  static addBookToStorage(title, author) {
     window.localStorage.setItem(title, author);
   }
 
-  display(title, author) {
+  static display(title, author) {
     const div = document.createElement('div');
     div.innerHTML = `
     <p>${title}</p>
@@ -28,11 +28,11 @@ class Books {
     this.revomeFromStorage(title);
   }
 
-  filterByTitle(item) {
+  static filterByTitle(item) {
     return item.title !== 'title 1';
   }
 
-  revomeFromStorage(title) {
+  static revomeFromStorage(title) {
     window.localStorage.removeItem(title);
   }
 }
@@ -55,10 +55,9 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   document.getElementById('book-form').reset();
 });
 
-
 const dbtn = document.querySelector('#bookContainer');
-dbtn.addEventListener('click',(e) => {
+dbtn.addEventListener('click', (e) => {
   const book = new Books();
-  const title = e.target.parentNode.firstChild.nextSibling
-  book.removeBook(title.textContent, title)
-} );
+  const title = e.target.parentNode.firstChild.nextSibling;
+  book.removeBook(title.textContent, title);
+});
