@@ -15,8 +15,8 @@ class Books {
   static display(title, author) {
     const div = document.createElement('div');
     div.innerHTML = `
-    <p>${title}</p>
-    <p>${author}</p>
+    <h3>${title}</h3>
+    <h3>${author}</h3>
     <button class = "delete-buttons">Delete</button>`;
     const bookContainer = document.getElementById('bookContainer');
     bookContainer.appendChild(div);
