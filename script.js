@@ -53,3 +53,4 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   addBookToStorage(title, author);
   document.getElementById('book-form').reset();
 });
+removeBook();
