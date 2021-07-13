@@ -23,9 +23,9 @@ class Books {
   }
 
   removeBook(title, e) {
-    this.bookList = this.bookList.filter(this.filterByTitle);
+    Books.bookList = this.bookList.filter(Books.filterByTitle);
     e.parentNode.parentNode.removeChild(e.parentNode);
-    this.revomeFromStorage(title);
+    Books.revomeFromStorage(title);
   }
 
   static filterByTitle(item) {
@@ -40,8 +40,7 @@ class Books {
 for (let i = 0; i < localStorage.length; i += 1) {
   const title = localStorage.key(i);
   const author = localStorage.getItem(localStorage.key(i));
-  const book = new Books();
-  book.display(title, author);
+  Books.display(title, author);
 }
 
 document.getElementById('book-form').addEventListener('submit', (e) => {
@@ -50,14 +49,14 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   const author = document.getElementById('author').value;
   const book = new Books();
   book.addBook(title, author);
-  book.display(title, author);
-  book.addBookToStorage(title, author);
+  Books.display(title, author);
+  Books.addBookToStorage(title, author);
   document.getElementById('book-form').reset();
 });
 
 const dbtn = document.querySelector('#bookContainer');
 dbtn.addEventListener('click', (e) => {
-  const book = new Books();
   const title = e.target.parentNode.firstChild.nextSibling;
+  const book = new Books();
   book.removeBook(title.textContent, title);
 });
