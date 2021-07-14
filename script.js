@@ -15,8 +15,8 @@ class Books {
   static display(title, author) {
     const div = document.createElement('div');
     div.innerHTML = `
-    <h3>${title}</h3>
-    <p>${author}</p>
+    <span>"<span>${title}</span>"</span>
+    <span> by ${author}</span>
     <button class = "delete-buttons">Delete</button>`;
     const bookContainer = document.getElementById('bookContainer');
     bookContainer.appendChild(div);
@@ -56,7 +56,7 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
 
 const dbtn = document.querySelector('#bookContainer');
 dbtn.addEventListener('click', (e) => {
-  const title = e.target.parentNode.firstChild.nextSibling;
+  const title = e.target.parentNode.firstChild.nextSibling.firstChild.nextSibling;
   const book = new Books();
-  book.removeBook(title.textContent, title);
+  book.removeBook(title.textContent, title.parentNode);
 });
