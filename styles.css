@@ -1,0 +1,80 @@
+.container {
+  width: 500px;
+  display: block;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-family: fantasy;
+  margin-top: -15px;
+}
+
+.delete-buttons {
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+  border: 0;
+  background-color: red;
+  color: white;
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+
+.title-author {
+  height: 50px;
+}
+
+#bookContainer {
+  border: black solid 2px;
+  border-radius: 7px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+#bookContainer div {
+  padding: 8px 20px;
+}
+
+#bookContainer div:nth-child(even) {
+  background-color: #ddd;
+}
+
+#form-title {
+  margin-top: 50px;
+}
+
+#book-form {
+  width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#book-title {
+  width: 250px;
+  padding: 4px;
+  margin-bottom: 10px;
+  border: #777 solid 1px;
+  border-radius: 8px;
+}
+
+#author {
+  width: 250px;
+  padding: 4px;
+  margin-bottom: 10px;
+  border: #777 solid 1px;
+  border-radius: 8px;
+}
+
+.form-btn {
+  float: right;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+  border: 0;
+  background-color: green;
+  color: white;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
