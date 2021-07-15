@@ -1,4 +1,4 @@
-import { DateTime } from './luxon.js';
+import { DateTime } from 'https://moment.github.io/luxon/es6/luxon.js';
 
 function printTime() {
   const currentDate = document.getElementById('currentDate');
