@@ -52,7 +52,7 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   Books.display(title, author);
   Books.addBookToStorage(title, author);
   document.getElementById('book-form').reset();
-  window.confirm("Book is added");
+  window.confirm('Book is added');
 });
 
 const dbtn = document.querySelector('#bookContainer');
@@ -65,7 +65,6 @@ dbtn.addEventListener('click', (e) => {
 const listbtn = document.getElementById('list-container');
 const addbtn = document.getElementById('book-form');
 const contactbtn = document.getElementById('contact-container');
-
 
 document.getElementById('list-btn').addEventListener('click', () => {
   listbtn.classList.remove('hide');
