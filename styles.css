@@ -6,6 +6,10 @@
   margin-left: auto;
 }
 
+h2 {
+  margin: 0;
+}
+
 .container h1 {
   text-align: center;
   font-weight: bolder;
@@ -78,3 +82,43 @@
   border-radius: 5px;
   font-size: 18px;
 }
+
+#nav-container {
+  background-color: gray;
+  margin-top: 0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav-links li {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.hide {
+  display: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
