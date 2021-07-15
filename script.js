@@ -52,6 +52,7 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   Books.display(title, author);
   Books.addBookToStorage(title, author);
   document.getElementById('book-form').reset();
+  window.confirm("Book is added");
 });
 
 const dbtn = document.querySelector('#bookContainer');
@@ -83,3 +84,16 @@ document.getElementById('contact-btn').addEventListener('click', () => {
   addbtn.classList.add('hide');
   contactbtn.classList.remove('hide');
 });
+
+function printTime() {
+  const currentDate = document.getElementById('currentDate');
+  const d = new Date();
+  const hours = d.getHours();
+  const mins = d.getMinutes();
+  const secs = d.getSeconds();
+  const year = d.getFullYear();
+  const month = d.getMonth();
+  const day = d.getDate();
+  currentDate.innerHTML = `<div>${day}.${month}.${year}, ${hours}:${mins}:${secs}</div>`;
+}
+setInterval(printTime, 1000);
