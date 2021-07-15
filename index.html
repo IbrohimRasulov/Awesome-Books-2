@@ -10,14 +10,31 @@
 </head>
 
 <body>
+  <nav id="nav-container">
+      <h2>Awesome books</h2>
+      <ul id="nav-links">
+        <li><a id="list-btn">List</a></li>
+        <span>|</span>
+        <li><a id="add-btn">Add new</a></li>
+        <span>|</span>  
+        <li><a id="contact-btn">Contact</a></li>
+      </ul>
+  </nav>
   <div class="container">
-    <h1>All awesome books</h1>
+      <div id="list-container">
+        <h1>All awesome books</h1>
 
-    <section id="bookContainer">
-    </section>
+        <section id="bookContainer">
+          
+        </section>
+      </div>
+      
+    
+    
 
-    <h1 id="form-title">Add a new book</h1>
+    
     <form id="book-form">
+      <h1 id="form-title">Add a new book</h1>
       <input type="text" id="book-title" name="book" placeholder="Title" required> <br>
       <input type="text" id="author" name="author" placeholder="Author" required> <br>
       <button class="form-btn" type="submit">Add</button>
