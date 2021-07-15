@@ -6,6 +6,10 @@
   margin-left: auto;
 }
 
+h2 {
+  margin: 0;
+}
+
 .container h1 {
   text-align: center;
   font-weight: bolder;
@@ -43,7 +47,7 @@
 }
 
 #form-title {
-  margin-top: 50px;
+  margin-top: -15px;
 }
 
 #book-form {
@@ -77,4 +81,99 @@
   padding: 3px 10px;
   border-radius: 5px;
   font-size: 18px;
+}
+
+#nav-container {
+  background-color: gray;
+  margin-top: 0;
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+
+#nav-container h2 {
+  line-height: 50px;
+  font-size: 28px;
+}
+
+#nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+#nav-links li {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.hide {
+  display: none;
+}
+
+a {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(24, 194, 24);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: gray;
+  width: 100%;
+}
+
+#contact-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
+#contact-container h1 {
+  font-family: fantasy;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: -14px;
+}
+
+#contact-container p {
+  font-size: 18px;
+  font-family: sans-serif;
+  word-spacing: 2px;
+  margin: 7px;
+}
+
+#contact-container ul {
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding-top: 10px;
+}
+
+#contact-container li {
+  padding-bottom: 7px;
+}
+
+#currentDate {
+  float: right;
+  font-size: 20px;
+  font-family: monospace;
+  padding: 5px 7px;
 }

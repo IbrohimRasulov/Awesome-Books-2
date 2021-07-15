@@ -52,6 +52,7 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   Books.display(title, author);
   Books.addBookToStorage(title, author);
   document.getElementById('book-form').reset();
+  window.confirm('Book is added');
 });
 
 const dbtn = document.querySelector('#bookContainer');
@@ -59,4 +60,26 @@ dbtn.addEventListener('click', (e) => {
   const title = e.target.parentNode.firstChild.nextSibling.firstChild.nextSibling;
   const book = new Books();
   book.removeBook(title.textContent, title.parentNode);
+});
+
+const listbtn = document.getElementById('list-container');
+const addbtn = document.getElementById('book-form');
+const contactbtn = document.getElementById('contact-container');
+
+document.getElementById('list-btn').addEventListener('click', () => {
+  listbtn.classList.remove('hide');
+  addbtn.classList.add('hide');
+  contactbtn.classList.add('hide');
+});
+
+document.getElementById('add-btn').addEventListener('click', () => {
+  listbtn.classList.add('hide');
+  addbtn.classList.remove('hide');
+  contactbtn.classList.add('hide');
+});
+
+document.getElementById('contact-btn').addEventListener('click', () => {
+  listbtn.classList.add('hide');
+  addbtn.classList.add('hide');
+  contactbtn.classList.remove('hide');
 });
