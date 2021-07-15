@@ -124,7 +124,7 @@ a:link {
 
 a:hover {
   text-decoration: none;
-  color: rgb(24, 194, 24)
+  color: rgb(24, 194, 24);
 }
 
 footer {
@@ -153,7 +153,7 @@ footer {
   margin-top: -14px;
 }
 
-#contact-container  p {
+#contact-container p {
   font-size: 18px;
   font-family: sans-serif;
   word-spacing: 2px;
